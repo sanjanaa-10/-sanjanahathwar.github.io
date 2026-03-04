@@ -142,17 +142,6 @@ font-size:20px;
 cursor:pointer;
 }
 
-/* BADGES */
-
-.badge{
-background:#00f7ff;
-color:black;
-padding:6px 12px;
-border-radius:6px;
-margin:5px;
-display:inline-block;
-}
-
 /* SKILLS */
 
 .skills{
@@ -235,19 +224,18 @@ padding:10px;
 
 <!-- ABOUT -->
 
-<section id="about" class="section">
+<section id="about" class="section active">
 
 <div class="box">
 
 <h2 class="section-title">About Me</h2>
 
 <p>
+Computer Science undergraduate at Dayananda Sagar College of Engineering with interests in software development, AI-driven systems, and cybersecurity.
 
-Third-year Computer Science undergraduate at Dayananda Sagar College of Engineering specializing in IoT, Cybersecurity, and Blockchain technologies.
+I enjoy building technology solutions that solve real-world problems, ranging from full-stack web platforms to machine learning based predictive systems. Through projects and hackathons, I have gained experience working with backend development, data driven applications, and intelligent software systems.
 
-Strong foundation in Data Structures, Computer Networks, and Secure Software Development with hands-on experience building full-stack platforms, AI-based predictive systems, and IoT solutions.
-
-Passionate about developing scalable software systems, intelligent data-driven applications, and cybersecurity-focused solutions that solve real-world problems.
+I am always eager to learn new technologies, improve my problem solving skills, and build scalable systems that create practical impact.
 
 </p>
 
@@ -266,45 +254,100 @@ Passionate about developing scalable software systems, intelligent data-driven a
 <div class="card">
 <details>
 <summary>⚡ EcoVestors – Waste Reuse Marketplace</summary>
+
 <p>
-Full-stack sustainability marketplace enabling exchange of reusable waste materials with authentication and analytics dashboard.
+
+Developed a full-stack sustainability marketplace that enables individuals and businesses to exchange reusable waste materials instead of discarding them.
+
+Key Features:
+• Implemented role-based authentication and secure user management  
+• Built smart listing and matching system for waste materials  
+• Designed admin dashboard for monitoring transactions and analytics  
+
+Tech Stack: Node.js, Express.js, MongoDB, JavaScript
+
 </p>
+
 </details>
 </div>
 
 <div class="card">
 <details>
 <summary>🌱 Smart AgriTech Intelligence Platform</summary>
+
 <p>
-AI-based crop prediction system analyzing humidity, rainfall, soil pH and temperature to determine crop growth feasibility.
+
+Built an AI-driven crop prediction system that analyzes environmental conditions to determine whether a crop can grow in a specific region.
+
+Key Features:
+• Processed agricultural datasets for training predictive models  
+• Used environmental parameters such as humidity, rainfall, soil pH, and temperature  
+• Developed machine learning model to assist in data-driven farming decisions  
+
+Tech Stack: Python, Machine Learning, Data Analysis
+
 </p>
+
 </details>
 </div>
 
 <div class="card">
 <details>
 <summary>🌍 NetZeroCampus – Carbon Awareness Platform</summary>
+
 <p>
-Platform for tracking and visualizing campus carbon emissions with dashboards and structured database integration.
+
+Developed a web platform for tracking and visualizing carbon emissions within campus environments.
+
+Key Features:
+• Designed interactive dashboards for emission monitoring  
+• Implemented structured database systems for storing carbon data  
+• Integrated REST APIs for efficient data management and reporting  
+
+Tech Stack: JavaScript, REST APIs, Databases
+
 </p>
+
 </details>
 </div>
 
 <div class="card">
 <details>
 <summary>🚨 IoT Safety Device</summary>
+
 <p>
-IoT-based emergency alert system built using Arduino and ESP32 with sensor integration.
+
+Engineered an IoT-based emergency alert system designed to provide real-time monitoring and rapid notifications during critical situations.
+
+Key Features:
+• Integrated sensors with Arduino and ESP32 microcontrollers  
+• Implemented automated alert and notification mechanisms  
+• Built system for real-time monitoring and emergency response  
+
+Tech Stack: Arduino, ESP32, IoT Sensors
+
 </p>
+
 </details>
 </div>
 
 <div class="card">
 <details>
 <summary>🏠 House Rental Service Platform</summary>
+
 <p>
-Java + MySQL web application for property search, authentication and booking management.
+
+Developed a web-based property rental platform that allows users to search, view, and book rental properties efficiently.
+
+Key Features:
+• Implemented secure user authentication and login system  
+• Designed database-driven property filtering and search functionality  
+• Built booking system integrated with backend database  
+
+Tech Stack: Java, MySQL
+
 </p>
+
 </details>
 </div>
 
@@ -350,15 +393,15 @@ Java + MySQL web application for property search, authentication and booking man
 
 <p>
 
-🏆 <b>1st Place – Bruteforce Hackathon</b>
+🏆 <b>1st Place – Bruteforce Hackathon</b><br><br>
 
 Developed EcoVestors sustainability marketplace platform focused on waste reuse and smart matching systems.
 
 <br><br>
 
-🥈 <b>2nd Place – PhaseShift Hackathon</b>
+🥈 <b>2nd Place – PhaseShift Hackathon</b><br><br>
 
-Built an AI crop prediction system using environmental data such as humidity, rainfall, soil pH and temperature.
+Built AI crop prediction system using environmental data such as humidity, rainfall, soil pH and temperature.
 
 </p>
 
@@ -416,7 +459,7 @@ linkedin.com/in/sanjana-vh
 
 <script>
 
-/* SECTION SWITCH */
+/* SHOW SECTION */
 
 function showSection(sectionId){
 
@@ -432,6 +475,8 @@ document.getElementById(sectionId).classList.add("active");
 hero.style.display="none";
 
 }
+
+/* SHOW HERO */
 
 function showHero(){
 

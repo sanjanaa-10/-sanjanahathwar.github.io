@@ -24,7 +24,6 @@ font-family:'Orbitron',sans-serif;
 body{
 background:#000814;
 color:#00f7ff;
-scroll-behavior:smooth;
 }
 
 /* PARTICLES */
@@ -52,51 +51,41 @@ nav a{
 color:#00f7ff;
 margin-left:20px;
 text-decoration:none;
+cursor:pointer;
 }
 
-/* HERO */
+/* TERMINAL HERO */
 
 .hero{
-height:90vh;
+height:60vh;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
-text-align:center;
 }
 
-.hero h1{
-font-size:60px;
+.terminal{
+background:black;
+border-radius:10px;
+padding:30px;
+width:600px;
+box-shadow:0 0 20px #00f7ff;
 }
 
-.typing{
-font-size:22px;
-margin-top:10px;
-}
-
-.btn{
-margin-top:20px;
-padding:12px 25px;
-background:#00f7ff;
-color:black;
-border-radius:8px;
-text-decoration:none;
-display:inline-block;
-margin-right:10px;
-}
-
-.btn:hover{
-background:#00c4cc;
-transform:scale(1.05);
-transition:0.3s;
+.terminal p{
+font-size:18px;
+margin:10px 0;
 }
 
 /* SECTIONS */
 
-section{
+.section{
+display:none;
 padding:80px 10%;
 text-align:center;
-border-bottom:1px solid #00f7ff;
+}
+
+.section.active{
+display:block;
 }
 
 .section-title{
@@ -117,19 +106,6 @@ text-align:left;
 
 .card:hover{
 box-shadow:0 0 15px #00f7ff;
-transform:translateY(-5px);
-transition:0.3s;
-}
-
-summary{
-font-size:20px;
-cursor:pointer;
-color:#00f7ff;
-}
-
-details p{
-margin-top:10px;
-line-height:1.6;
 }
 
 /* TECH BADGES */
@@ -141,6 +117,18 @@ padding:6px 10px;
 border-radius:6px;
 margin:4px;
 display:inline-block;
+}
+
+/* BUTTON */
+
+.btn{
+padding:12px 25px;
+background:#00f7ff;
+color:black;
+border-radius:8px;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
 }
 
 /* SKILLS */
@@ -176,27 +164,36 @@ color:#00f7ff;
 <h2>Sanjana</h2>
 
 <div>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#achievements">Achievements</a>
-<a href="#github">GitHub</a>
-<a href="#contact">Contact</a>
+<a onclick="showSection('about')">About</a>
+<a onclick="showSection('projects')">Projects</a>
+<a onclick="showSection('skills')">Skills</a>
+<a onclick="showSection('achievements')">Achievements</a>
+<a onclick="showSection('resume')">Resume</a>
+<a onclick="showSection('contact')">Contact</a>
 </div>
 
 </nav>
 
+<!-- TERMINAL HERO -->
+
 <div class="hero">
 
-<h1>Sanjana Hathwar</h1>
+<div class="terminal">
 
-<div class="typing" id="typing"></div>
-
-<a class="btn" href="resume.pdf" download>Download Resume</a>
+<p>> Initializing Developer Portfolio...</p>
+<p>> Loading profile...</p>
+<p>> Name: Sanjana Hathwar</p>
+<p>> Role: Software Developer</p>
+<p>> Interests: AI | Cybersecurity | IoT</p>
+<p>> Status: Ready 🚀</p>
 
 </div>
 
-<section id="about">
+</div>
+
+<!-- ABOUT -->
+
+<section id="about" class="section active">
 
 <h2 class="section-title">About Me</h2>
 
@@ -209,7 +206,9 @@ Passionate about building scalable software systems, AI-driven applications, and
 
 </section>
 
-<section id="projects">
+<!-- PROJECTS -->
+
+<section id="projects" class="section">
 
 <h2 class="section-title">Projects</h2>
 
@@ -220,7 +219,7 @@ Passionate about building scalable software systems, AI-driven applications, and
 
 <p>
 
-Developed a sustainability-focused platform enabling exchange of reusable waste materials.
+Developed sustainability marketplace enabling exchange of reusable waste materials.
 
 Key Contributions:
 
@@ -240,10 +239,6 @@ Key Contributions:
 
 </div>
 
-<br>
-
-<a class="btn" href="https://github.com/sanjanaa-10" target="_blank">GitHub Repo</a>
-
 </details>
 
 </div>
@@ -255,13 +250,7 @@ Key Contributions:
 
 <p>
 
-Machine learning system that predicts whether crops can grow under environmental conditions.
-
-Key Contributions:
-
-• Dataset preprocessing and feature engineering  
-• Trained ML model using agricultural datasets  
-• Prediction using humidity, soil pH, rainfall, temperature and weather data  
+Machine learning model predicting crop growth using environmental parameters like humidity, pH, rainfall and temperature.
 
 </p>
 
@@ -272,10 +261,6 @@ Key Contributions:
 <span class="badge">Data Analysis</span>
 
 </div>
-
-<br>
-
-<a class="btn" href="https://github.com/sanjanaa-10" target="_blank">GitHub Repo</a>
 
 </details>
 
@@ -288,14 +273,14 @@ Key Contributions:
 
 <p>
 
-Platform designed to track and visualize carbon emissions using interactive dashboards.
+Platform for tracking and visualizing carbon emissions with interactive dashboards.
 
 </p>
 
 <div>
 
 <span class="badge">JavaScript</span>
-<span class="badge">REST APIs</span>
+<span class="badge">APIs</span>
 <span class="badge">Data Visualization</span>
 
 </div>
@@ -306,7 +291,9 @@ Platform designed to track and visualize carbon emissions using interactive dash
 
 </section>
 
-<section id="skills">
+<!-- SKILLS -->
+
+<section id="skills" class="section">
 
 <h2 class="section-title">Technical Skills</h2>
 
@@ -328,7 +315,9 @@ Platform designed to track and visualize carbon emissions using interactive dash
 
 </section>
 
-<section id="achievements">
+<!-- ACHIEVEMENTS -->
+
+<section id="achievements" class="section">
 
 <h2 class="section-title">Achievements</h2>
 
@@ -342,27 +331,35 @@ Developed EcoVestors marketplace platform focused on sustainable waste reuse and
 
 🥈 <b>2nd Place – PhaseShift Hackathon</b><br><br>
 
-Built AI crop prediction system using agricultural datasets and environmental parameters such as humidity, pH, rainfall, and temperature.
+Built AI crop prediction system using agricultural datasets and environmental parameters such as humidity, pH, rainfall and temperature.
 
 <br><br>
 
 💡 <b>Hackathon Participation</b><br><br>
 
-Actively participate in technical hackathons to build rapid prototypes, collaborate with teams, and implement scalable solutions under time constraints.
+Actively participate in hackathons to build rapid prototypes, collaborate with teams and implement scalable solutions.
 
 </p>
 
 </section>
 
-<section id="github">
+<!-- RESUME -->
 
-<h2 class="section-title">GitHub Activity</h2>
+<section id="resume" class="section">
 
-<img src="https://github-readme-stats.vercel.app/api?username=sanjanaa-10&show_icons=true&theme=tokyonight">
+<h2 class="section-title">Resume</h2>
+
+<p>You can download my full resume below.</p>
+
+<a class="btn" href="resume.pdf" download>
+Download Resume
+</a>
 
 </section>
 
-<section id="contact">
+<!-- CONTACT -->
+
+<section id="contact" class="section">
 
 <h2 class="section-title">Contact</h2>
 
@@ -392,38 +389,21 @@ linkedin.com/in/sanjana-vh
 
 <script>
 
-const text=[
-"Software Developer",
-"Cybersecurity Enthusiast",
-"AI & Data Enthusiast"
-]
+/* section switching */
 
-let i=0
-let j=0
-let current=""
-let letter=""
+function showSection(sectionId){
 
-function typing(){
+let sections=document.querySelectorAll(".section");
 
-if(i===text.length){
-i=0
-}
+sections.forEach(section=>{
+section.classList.remove("active");
+});
 
-current=text[i]
-letter=current.slice(0,++j)
-
-document.getElementById("typing").textContent=letter
-
-if(letter.length===current.length){
-i++
-j=0
-}
-
-setTimeout(typing,120)
+document.getElementById(sectionId).classList.add("active");
 
 }
 
-typing()
+/* particles */
 
 particlesJS("particles-js",{
 particles:{

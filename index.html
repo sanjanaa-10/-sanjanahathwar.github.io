@@ -23,7 +23,8 @@ box-sizing:border-box;
 body{
 font-family:'Inter',sans-serif;
 background:linear-gradient(135deg,#000814,#001d3d);
-color:#e0ffff;
+color:#e6ffff;
+min-height:100vh;
 }
 
 /* PARTICLES */
@@ -50,8 +51,8 @@ z-index:1000;
 
 nav h2{
 font-family:'Orbitron';
-cursor:pointer;
 color:#00f7ff;
+cursor:pointer;
 }
 
 .nav-links{
@@ -78,7 +79,7 @@ box-shadow:0 0 10px #00f7ff;
 /* HERO */
 
 .hero{
-height:55vh;
+height:60vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -95,35 +96,43 @@ color:#00f7ff;
 .typing{
 font-size:22px;
 margin-top:10px;
+opacity:0.9;
 }
 
 /* SECTIONS */
 
 .section{
 display:none;
-padding:60px 10%;
+padding:120px 10% 80px;
+min-height:80vh;
 }
 
 .section.active{
 display:block;
+animation:fade 0.5s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
 }
 
 /* BOX */
 
 .box{
 background:#020617;
-padding:40px;
-border-radius:15px;
+padding:40px 50px;
+border-radius:18px;
 border:1px solid #00f7ff;
-max-width:900px;
+max-width:850px;
 margin:auto;
 text-align:center;
+line-height:1.8;
 transition:0.4s;
 }
 
 .box:hover{
 box-shadow:0 0 25px #00f7ff;
-transform:translateY(-5px);
 }
 
 .section-title{
@@ -133,33 +142,37 @@ margin-bottom:20px;
 color:#00f7ff;
 }
 
-/* PROJECT CARDS */
+/* PROJECT DROPDOWN */
 
-.card{
+details{
 background:#020617;
+border:1px solid #00f7ff;
 padding:20px;
 border-radius:12px;
-border:1px solid #00f7ff;
 margin-top:20px;
-transition:0.4s;
-text-align:left;
+cursor:pointer;
+transition:0.3s;
 }
 
-.card:hover{
-transform:scale(1.03);
-box-shadow:0 0 20px #00f7ff;
+details:hover{
+box-shadow:0 0 15px #00f7ff;
 }
 
-.card h3{
-margin-bottom:10px;
+summary{
 font-family:'Orbitron';
+font-size:18px;
 color:#00f7ff;
 }
 
-.card ul{
-margin-left:20px;
+.project-content{
 margin-top:10px;
+text-align:left;
 line-height:1.6;
+}
+
+.project-content ul{
+margin-left:20px;
+margin-top:8px;
 }
 
 .tech{
@@ -215,15 +228,10 @@ box-shadow:0 0 20px #00f7ff;
 /* FOOTER */
 
 footer{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:#020617;
 text-align:center;
-padding:15px;
+padding:20px;
+background:#020617;
 border-top:1px solid #00f7ff;
-font-size:14px;
 }
 
 </style>
@@ -266,13 +274,15 @@ font-size:14px;
 
 <h2 class="section-title">About Me</h2>
 
-<p>
+<p style="max-width:700px;margin:auto">
 
-Computer Science undergraduate at Dayananda Sagar College of Engineering with interests in software development, AI-driven systems, and cybersecurity.
+I am a Computer Science undergraduate with a strong interest in software development, artificial intelligence, and cybersecurity.
 
-I enjoy building technology solutions that solve real-world problems, ranging from full-stack web platforms to machine learning based predictive systems.
+I enjoy learning how technology works and using that knowledge to build practical solutions for real-world problems. My interests include full-stack web development, data-driven applications, and machine learning systems.
 
-Through projects and hackathons, I have gained experience working with backend development, data driven applications, and intelligent software systems.
+Through projects and hackathons, I have gained hands-on experience in backend development, building web platforms, and working with datasets to create predictive models.
+
+I am always curious to explore new technologies, improve my coding skills, and understand how modern software systems are designed and built.
 
 </p>
 
@@ -288,105 +298,70 @@ Through projects and hackathons, I have gained experience working with backend d
 
 <h2 class="section-title">Projects</h2>
 
-<!-- EcoVestors -->
-
-<div class="card">
-
-<h3>⚡ EcoVestors – Waste Reuse Marketplace</h3>
-
-<p>
-Full-stack sustainability marketplace enabling exchange of reusable waste materials.
-</p>
-
+<details>
+<summary>⚡ EcoVestors – Waste Reuse Marketplace</summary>
+<div class="project-content">
+<p>Full-stack sustainability marketplace enabling exchange of reusable waste materials.</p>
 <ul>
 <li>Role-based authentication</li>
-<li>Smart material listing system</li>
+<li>Smart listing system</li>
 <li>Admin analytics dashboard</li>
 </ul>
-
 <p class="tech">Node.js • Express • MongoDB • JavaScript</p>
-
 </div>
+</details>
 
-<!-- Smart AgriTech -->
-
-<div class="card">
-
-<h3>🌱 Smart AgriTech Intelligence Platform</h3>
-
-<p>
-AI-based crop prediction system analyzing environmental conditions.
-</p>
-
+<details>
+<summary>🌱 Smart AgriTech Intelligence Platform</summary>
+<div class="project-content">
+<p>AI-based crop prediction system analyzing environmental conditions.</p>
 <ul>
 <li>Machine learning crop prediction</li>
-<li>Dataset preprocessing and analysis</li>
-<li>Environmental factor modeling</li>
+<li>Dataset preprocessing</li>
+<li>Environmental factor analysis</li>
 </ul>
-
 <p class="tech">Python • Machine Learning • Data Analysis</p>
-
 </div>
+</details>
 
-<!-- NetZeroCampus -->
-
-<div class="card">
-
-<h3>🌍 NetZeroCampus – Carbon Awareness Platform</h3>
-
-<p>
-Web platform designed to monitor and visualize carbon emissions across campus environments.
-</p>
-
+<details>
+<summary>🌍 NetZeroCampus – Carbon Awareness Platform</summary>
+<div class="project-content">
+<p>Platform for tracking and visualizing carbon emissions.</p>
 <ul>
-<li>Interactive carbon emission dashboards</li>
-<li>Data storage and management system</li>
-<li>REST API integration for environmental data</li>
+<li>Interactive dashboards</li>
+<li>Data visualization</li>
+<li>Emission monitoring</li>
 </ul>
-
 <p class="tech">JavaScript • APIs • Data Visualization</p>
-
 </div>
+</details>
 
-<!-- IoT Safety Device -->
-
-<div class="card">
-
-<h3>🚨 IoT Safety Device</h3>
-
-<p>
-IoT-based emergency alert and monitoring system designed for safety applications.
-</p>
-
+<details>
+<summary>🚨 IoT Safety Device</summary>
+<div class="project-content">
+<p>IoT-based safety monitoring and alert system.</p>
 <ul>
-<li>Sensor integration with microcontrollers</li>
-<li>Real-time monitoring and alerts</li>
-<li>Device communication system</li>
+<li>Sensor integration</li>
+<li>Real-time monitoring</li>
+<li>Emergency alerts</li>
 </ul>
-
 <p class="tech">Arduino • ESP32 • IoT</p>
-
 </div>
+</details>
 
-<!-- House Rental Platform -->
-
-<div class="card">
-
-<h3>🏠 House Rental Service Platform</h3>
-
-<p>
-Web application for browsing and managing rental properties.
-</p>
-
+<details>
+<summary>🏠 House Rental Service Platform</summary>
+<div class="project-content">
+<p>Web platform for searching and booking rental properties.</p>
 <ul>
-<li>User authentication and login system</li>
-<li>Property listing and filtering</li>
-<li>Database-driven booking management</li>
+<li>User authentication</li>
+<li>Property listing system</li>
+<li>Booking management</li>
 </ul>
-
 <p class="tech">Java • MySQL</p>
-
 </div>
+</details>
 
 </div>
 
@@ -401,7 +376,6 @@ Web application for browsing and managing rental properties.
 <h2 class="section-title">Technical Skills</h2>
 
 <div class="skills">
-
 <div class="skill-box">Python</div>
 <div class="skill-box">C</div>
 <div class="skill-box">C++</div>
@@ -413,7 +387,6 @@ Web application for browsing and managing rental properties.
 <div class="skill-box">Linux</div>
 <div class="skill-box">Git</div>
 <div class="skill-box">Cybersecurity</div>
-
 </div>
 
 </div>
@@ -432,13 +405,13 @@ Web application for browsing and managing rental properties.
 
 🏆 <b>1st Place – Bruteforce Hackathon</b><br><br>
 
-Developed EcoVestors sustainability marketplace platform focused on waste reuse and smart matching systems.
+Built EcoVestors sustainability marketplace platform focused on waste reuse.
 
 <br><br>
 
 🥈 <b>2nd Place – PhaseShift Hackathon</b><br><br>
 
-Built AI crop prediction system using environmental data such as humidity, rainfall, soil pH and temperature.
+Developed AI crop prediction system analyzing environmental data.
 
 </p>
 
@@ -471,20 +444,8 @@ Built AI crop prediction system using environmental data such as humidity, rainf
 <h2 class="section-title">Contact</h2>
 
 <p>Email: hathwarsanjana12@gmail.com</p>
-
-<p>
-GitHub:
-<a href="https://github.com/sanjanaa-10" target="_blank">
-github.com/sanjanaa-10
-</a>
-</p>
-
-<p>
-LinkedIn:
-<a href="https://linkedin.com/in/sanjana-vh" target="_blank">
-linkedin.com/in/sanjana-vh
-</a>
-</p>
+<p>GitHub: github.com/sanjanaa-10</p>
+<p>LinkedIn: linkedin.com/in/sanjana-vh</p>
 
 </div>
 
@@ -496,7 +457,7 @@ linkedin.com/in/sanjana-vh
 
 <script>
 
-/* SHOW SECTION */
+/* SECTION SWITCH */
 
 function showSection(sectionId){
 

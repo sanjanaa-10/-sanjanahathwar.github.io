@@ -192,8 +192,12 @@ margin-top:20px;
 /* FOOTER */
 
 footer{
+position:fixed;
+bottom:0;
+width:100%;
+background:#020617;
 text-align:center;
-padding:20px;
+padding:10px;
 }
 
 </style>
@@ -239,7 +243,7 @@ padding:20px;
 
 <p>
 
-Third-year Computer Science undergraduate at Dayananda Sagar College of Engineering specializing in IoT, Cybersecurity, and Blockchain technologies. 
+Third-year Computer Science undergraduate at Dayananda Sagar College of Engineering specializing in IoT, Cybersecurity, and Blockchain technologies.
 
 Strong foundation in Data Structures, Computer Networks, and Secure Software Development with hands-on experience building full-stack platforms, AI-based predictive systems, and IoT solutions.
 
@@ -249,6 +253,10 @@ Passionate about developing scalable software systems, intelligent data-driven a
 
 </div>
 
+</section>
+
+<!-- PROJECTS -->
+
 <section id="projects" class="section">
 
 <div class="box">
@@ -256,113 +264,48 @@ Passionate about developing scalable software systems, intelligent data-driven a
 <h2 class="section-title">Projects</h2>
 
 <div class="card">
-
 <details>
 <summary>⚡ EcoVestors – Waste Reuse Marketplace</summary>
-
 <p>
-
-Developed a full-stack sustainability marketplace that enables individuals and businesses to exchange reusable waste materials.
-
-Key Contributions:
-• Implemented role-based authentication and secure user management  
-• Designed keyword-based smart matching system for listings  
-• Built admin dashboard with analytics and transaction tracking  
-
-Tech Stack: Node.js, Express.js, MongoDB, JavaScript
-
+Full-stack sustainability marketplace enabling exchange of reusable waste materials with authentication and analytics dashboard.
 </p>
-
 </details>
-
 </div>
 
 <div class="card">
-
 <details>
 <summary>🌱 Smart AgriTech Intelligence Platform</summary>
-
 <p>
-
-AI-driven crop prediction system that analyzes environmental conditions to determine crop growth feasibility.
-
-Key Contributions:
-• Built predictive model using agricultural datasets  
-• Used environmental factors such as humidity, rainfall, soil pH and temperature  
-• Applied machine learning techniques for crop suitability prediction  
-
-Tech Stack: Python, Machine Learning
-
+AI-based crop prediction system analyzing humidity, rainfall, soil pH and temperature to determine crop growth feasibility.
 </p>
-
 </details>
-
 </div>
 
 <div class="card">
-
 <details>
 <summary>🌍 NetZeroCampus – Carbon Awareness Platform</summary>
-
 <p>
-
-Web platform designed to track and visualize carbon emissions within campus environments.
-
-Key Contributions:
-• Built interactive dashboards for emissions tracking  
-• Implemented structured database systems  
-• Integrated REST APIs for data management  
-
-Tech Stack: JavaScript, REST APIs, Databases
-
+Platform for tracking and visualizing campus carbon emissions with dashboards and structured database integration.
 </p>
-
 </details>
-
 </div>
 
 <div class="card">
-
 <details>
 <summary>🚨 IoT Safety Device</summary>
-
 <p>
-
-Real-time emergency alert system designed using IoT technologies.
-
-Key Contributions:
-• Integrated sensors with Arduino and ESP32  
-• Designed automated alert and notification mechanism  
-• Built monitoring system for emergency response  
-
-Tech Stack: Arduino, ESP32, IoT Sensors
-
+IoT-based emergency alert system built using Arduino and ESP32 with sensor integration.
 </p>
-
 </details>
-
 </div>
 
 <div class="card">
-
 <details>
 <summary>🏠 House Rental Service Platform</summary>
-
 <p>
-
-Web application for property search and rental management.
-
-Key Contributions:
-• Implemented authentication and booking system  
-• Designed database-driven property filtering  
-• Built backend logic for property listings  
-
-Tech Stack: Java, MySQL
-
+Java + MySQL web application for property search, authentication and booking management.
 </p>
-
 </details>
-
 </div>
 
 </div>
@@ -397,6 +340,8 @@ Tech Stack: Java, MySQL
 
 </section>
 
+<!-- ACHIEVEMENTS -->
+
 <section id="achievements" class="section">
 
 <div class="box">
@@ -407,19 +352,13 @@ Tech Stack: Java, MySQL
 
 🏆 <b>1st Place – Bruteforce Hackathon</b>
 
-Developed <b>EcoVestors</b>, a sustainability-focused marketplace platform that enables users to exchange reusable waste materials. The solution included smart listing matching, secure user authentication, and an analytics dashboard for monitoring platform activity. The project was recognized for its practical environmental impact and scalable architecture.
+Developed EcoVestors sustainability marketplace platform focused on waste reuse and smart matching systems.
 
 <br><br>
 
 🥈 <b>2nd Place – PhaseShift Hackathon</b>
 
-Built an <b>AI-based Crop Prediction System</b> capable of analyzing environmental factors such as humidity, rainfall, soil pH, and temperature to predict crop growth feasibility. The project applied machine learning techniques on agricultural datasets to assist in data-driven farming decisions.
-
-<br><br>
-
-💡 <b>Active Hackathon Participation</b>
-
-Regular participant in university and technical hackathons, collaborating with teams to design innovative solutions and build functional prototypes within limited development timeframes.
+Built an AI crop prediction system using environmental data such as humidity, rainfall, soil pH and temperature.
 
 </p>
 
@@ -471,14 +410,13 @@ linkedin.com/in/sanjana-vh
 
 </section>
 
-<footer style="position:fixed;bottom:0;width:100%;background:#020617">
-
+<footer>
 <p>© 2026 Sanjana Hathwar</p>
-
 </footer>
+
 <script>
 
-/* SHOW SECTION */
+/* SECTION SWITCH */
 
 function showSection(sectionId){
 
@@ -494,8 +432,6 @@ document.getElementById(sectionId).classList.add("active");
 hero.style.display="none";
 
 }
-
-/* SHOW HERO */
 
 function showHero(){
 

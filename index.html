@@ -40,6 +40,7 @@ z-index:-1;
 nav{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px 10%;
 background:#020617;
 position:sticky;
@@ -47,17 +48,33 @@ top:0;
 z-index:1000;
 }
 
-nav a{
-color:#00f7ff;
-margin-left:20px;
+nav h2{
 cursor:pointer;
-text-decoration:none;
+}
+
+.nav-links{
+display:flex;
+gap:15px;
+}
+
+.nav-links a{
+border:1px solid #00f7ff;
+padding:8px 16px;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+background:#00f7ff;
+color:black;
+box-shadow:0 0 10px #00f7ff;
 }
 
 /* HERO */
 
 .hero{
-height:60vh;
+height:70vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -85,7 +102,7 @@ padding:60px 10%;
 display:block;
 }
 
-/* CONTENT BOX */
+/* BOX */
 
 .box{
 background:#020617;
@@ -111,11 +128,18 @@ padding:20px;
 border-radius:12px;
 border:1px solid #00f7ff;
 margin-top:20px;
+transition:0.4s;
 text-align:left;
 }
 
 .card:hover{
-box-shadow:0 0 15px #00f7ff;
+transform:scale(1.03);
+box-shadow:0 0 20px #00f7ff;
+}
+
+summary{
+font-size:20px;
+cursor:pointer;
 }
 
 /* BADGES */
@@ -182,9 +206,9 @@ padding:20px;
 
 <nav>
 
-<h2>Sanjana</h2>
+<h2 onclick="showHero()">Sanjana</h2>
 
-<div>
+<div class="nav-links">
 <a onclick="showSection('about')">About</a>
 <a onclick="showSection('projects')">Projects</a>
 <a onclick="showSection('skills')">Skills</a>
@@ -197,7 +221,7 @@ padding:20px;
 
 <!-- HERO -->
 
-<div class="hero">
+<div class="hero" id="hero">
 
 <h1>Sanjana Hathwar</h1>
 
@@ -207,7 +231,7 @@ padding:20px;
 
 <!-- ABOUT -->
 
-<section id="about" class="section active">
+<section id="about" class="section">
 
 <div class="box">
 
@@ -215,8 +239,8 @@ padding:20px;
 
 <p>
 
-Computer Science undergraduate specializing in IoT, Cybersecurity and Blockchain technologies.
-Passionate about building scalable software systems and AI driven solutions for real world problems.
+Computer Science undergraduate specializing in IoT, Cybersecurity and Blockchain technologies.  
+Passionate about building scalable software systems and AI-driven solutions.
 
 </p>
 
@@ -235,13 +259,9 @@ Passionate about building scalable software systems and AI driven solutions for 
 <div class="card">
 
 <details>
-<summary>EcoVestors – Waste Reuse Marketplace</summary>
+<summary>⚡ EcoVestors – Waste Reuse Marketplace</summary>
 
-<p>
-
-Marketplace platform enabling exchange of reusable waste materials.
-
-</p>
+<p>Marketplace platform enabling exchange of reusable waste materials.</p>
 
 <div>
 
@@ -258,13 +278,9 @@ Marketplace platform enabling exchange of reusable waste materials.
 <div class="card">
 
 <details>
-<summary>AI Crop Prediction System</summary>
+<summary>🧠 AI Crop Prediction System</summary>
 
-<p>
-
-Machine learning model predicting crop growth using humidity, pH, rainfall and temperature.
-
-</p>
+<p>Machine learning model predicting crop growth using environmental parameters.</p>
 
 <div>
 
@@ -320,12 +336,8 @@ Machine learning model predicting crop growth using humidity, pH, rainfall and t
 <p>
 
 🏆 1st Place – Bruteforce Hackathon  
-Built EcoVestors sustainability marketplace.
-
 <br><br>
-
-🥈 2nd Place – PhaseShift Hackathon  
-Developed AI crop prediction model using agricultural datasets.
+🥈 2nd Place – PhaseShift Hackathon
 
 </p>
 
@@ -340,8 +352,6 @@ Developed AI crop prediction model using agricultural datasets.
 <div class="box">
 
 <h2 class="section-title">Resume</h2>
-
-<p>Download my resume below.</p>
 
 <a class="btn" href="resume.pdf" download>
 Download Resume
@@ -387,17 +397,35 @@ linkedin.com/in/sanjana-vh
 
 <script>
 
-/* SECTION SWITCH */
+/* SHOW SECTION */
 
 function showSection(sectionId){
 
 let sections=document.querySelectorAll(".section");
+let hero=document.getElementById("hero");
 
 sections.forEach(section=>{
 section.classList.remove("active");
 });
 
 document.getElementById(sectionId).classList.add("active");
+
+hero.style.display="none";
+
+}
+
+/* SHOW HERO */
+
+function showHero(){
+
+let sections=document.querySelectorAll(".section");
+let hero=document.getElementById("hero");
+
+sections.forEach(section=>{
+section.classList.remove("active");
+});
+
+hero.style.display="flex";
 
 }
 
@@ -449,4 +477,5 @@ move:{speed:2}
 </script>
 
 </body>
+
 </html>

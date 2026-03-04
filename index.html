@@ -26,7 +26,7 @@ background:#000814;
 color:#00f7ff;
 }
 
-/* PARTICLES */
+/* PARTICLES BACKGROUND */
 
 #particles-js{
 position:fixed;
@@ -54,26 +54,24 @@ text-decoration:none;
 cursor:pointer;
 }
 
-/* TERMINAL HERO */
+/* HERO */
 
 .hero{
 height:60vh;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
+text-align:center;
 }
 
-.terminal{
-background:black;
-border-radius:10px;
-padding:30px;
-width:600px;
-box-shadow:0 0 20px #00f7ff;
+.hero h1{
+font-size:60px;
 }
 
-.terminal p{
-font-size:18px;
-margin:10px 0;
+.typing{
+font-size:22px;
+margin-top:10px;
 }
 
 /* SECTIONS */
@@ -174,20 +172,13 @@ color:#00f7ff;
 
 </nav>
 
-<!-- TERMINAL HERO -->
+<!-- HERO -->
 
 <div class="hero">
 
-<div class="terminal">
+<h1>Sanjana Hathwar</h1>
 
-<p>> Initializing Developer Portfolio...</p>
-<p>> Loading profile...</p>
-<p>> Name: Sanjana Hathwar</p>
-<p>> Role: Software Developer</p>
-<p>> Interests: AI | Cybersecurity | IoT</p>
-<p>> Status: Ready 🚀</p>
-
-</div>
+<div class="typing" id="typing"></div>
 
 </div>
 
@@ -389,7 +380,7 @@ linkedin.com/in/sanjana-vh
 
 <script>
 
-/* section switching */
+/* SECTION SWITCHING */
 
 function showSection(sectionId){
 
@@ -403,7 +394,42 @@ document.getElementById(sectionId).classList.add("active");
 
 }
 
-/* particles */
+/* TYPING ANIMATION */
+
+const text=[
+"Software Developer",
+"Cybersecurity Enthusiast",
+"AI & Data Enthusiast"
+]
+
+let i=0
+let j=0
+let current=""
+let letter=""
+
+function typing(){
+
+if(i===text.length){
+i=0
+}
+
+current=text[i]
+letter=current.slice(0,++j)
+
+document.getElementById("typing").textContent=letter
+
+if(letter.length===current.length){
+i++
+j=0
+}
+
+setTimeout(typing,120)
+
+}
+
+typing()
+
+/* PARTICLES */
 
 particlesJS("particles-js",{
 particles:{

@@ -26,7 +26,7 @@ background:#000814;
 color:#00f7ff;
 }
 
-/* PARTICLES BACKGROUND */
+/* PARTICLES */
 
 #particles-js{
 position:fixed;
@@ -50,8 +50,8 @@ z-index:1000;
 nav a{
 color:#00f7ff;
 margin-left:20px;
-text-decoration:none;
 cursor:pointer;
+text-decoration:none;
 }
 
 /* HERO */
@@ -78,17 +78,29 @@ margin-top:10px;
 
 .section{
 display:none;
-padding:80px 10%;
-text-align:center;
+padding:60px 10%;
 }
 
 .section.active{
 display:block;
 }
 
+/* CONTENT BOX */
+
+.box{
+background:#020617;
+padding:40px;
+border-radius:15px;
+border:1px solid #00f7ff;
+box-shadow:0 0 20px rgba(0,247,255,0.3);
+max-width:900px;
+margin:auto;
+text-align:center;
+}
+
 .section-title{
 font-size:32px;
-margin-bottom:30px;
+margin-bottom:20px;
 }
 
 /* PROJECT CARDS */
@@ -98,7 +110,7 @@ background:#020617;
 padding:20px;
 border-radius:12px;
 border:1px solid #00f7ff;
-margin-bottom:20px;
+margin-top:20px;
 text-align:left;
 }
 
@@ -106,15 +118,39 @@ text-align:left;
 box-shadow:0 0 15px #00f7ff;
 }
 
-/* TECH BADGES */
+/* BADGES */
 
 .badge{
 background:#00f7ff;
 color:black;
-padding:6px 10px;
+padding:6px 12px;
 border-radius:6px;
-margin:4px;
+margin:5px;
 display:inline-block;
+}
+
+/* SKILLS */
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:20px;
+}
+
+.skills span{
+border:1px solid #00f7ff;
+padding:10px 18px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.skills span:hover{
+background:#00f7ff;
+color:black;
+transform:scale(1.1);
+box-shadow:0 0 15px #00f7ff;
 }
 
 /* BUTTON */
@@ -129,24 +165,11 @@ display:inline-block;
 margin-top:20px;
 }
 
-/* SKILLS */
-
-.skills span{
-border:1px solid #00f7ff;
-padding:10px;
-margin:6px;
-display:inline-block;
-}
-
 /* FOOTER */
 
 footer{
 text-align:center;
 padding:20px;
-}
-
-a{
-color:#00f7ff;
 }
 
 </style>
@@ -186,20 +209,26 @@ color:#00f7ff;
 
 <section id="about" class="section active">
 
+<div class="box">
+
 <h2 class="section-title">About Me</h2>
 
 <p>
 
-Computer Science undergraduate specializing in IoT, Cybersecurity, and Blockchain technologies.  
-Passionate about building scalable software systems, AI-driven applications, and solving real-world challenges using data-driven solutions.
+Computer Science undergraduate specializing in IoT, Cybersecurity and Blockchain technologies.
+Passionate about building scalable software systems and AI driven solutions for real world problems.
 
 </p>
+
+</div>
 
 </section>
 
 <!-- PROJECTS -->
 
 <section id="projects" class="section">
+
+<div class="box">
 
 <h2 class="section-title">Projects</h2>
 
@@ -210,14 +239,7 @@ Passionate about building scalable software systems, AI-driven applications, and
 
 <p>
 
-Developed sustainability marketplace enabling exchange of reusable waste materials.
-
-Key Contributions:
-
-• Backend architecture design  
-• Authentication and user management  
-• Smart matching system for listings  
-• Admin analytics dashboard  
+Marketplace platform enabling exchange of reusable waste materials.
 
 </p>
 
@@ -226,7 +248,6 @@ Key Contributions:
 <span class="badge">Node.js</span>
 <span class="badge">Express</span>
 <span class="badge">MongoDB</span>
-<span class="badge">JavaScript</span>
 
 </div>
 
@@ -241,7 +262,7 @@ Key Contributions:
 
 <p>
 
-Machine learning model predicting crop growth using environmental parameters like humidity, pH, rainfall and temperature.
+Machine learning model predicting crop growth using humidity, pH, rainfall and temperature.
 
 </p>
 
@@ -249,34 +270,12 @@ Machine learning model predicting crop growth using environmental parameters lik
 
 <span class="badge">Python</span>
 <span class="badge">Machine Learning</span>
-<span class="badge">Data Analysis</span>
 
 </div>
 
 </details>
 
 </div>
-
-<div class="card">
-
-<details>
-<summary>NetZeroCampus – Carbon Awareness Platform</summary>
-
-<p>
-
-Platform for tracking and visualizing carbon emissions with interactive dashboards.
-
-</p>
-
-<div>
-
-<span class="badge">JavaScript</span>
-<span class="badge">APIs</span>
-<span class="badge">Data Visualization</span>
-
-</div>
-
-</details>
 
 </div>
 
@@ -285,6 +284,8 @@ Platform for tracking and visualizing carbon emissions with interactive dashboar
 <!-- SKILLS -->
 
 <section id="skills" class="section">
+
+<div class="box">
 
 <h2 class="section-title">Technical Skills</h2>
 
@@ -304,33 +305,31 @@ Platform for tracking and visualizing carbon emissions with interactive dashboar
 
 </div>
 
+</div>
+
 </section>
 
 <!-- ACHIEVEMENTS -->
 
 <section id="achievements" class="section">
 
+<div class="box">
+
 <h2 class="section-title">Achievements</h2>
 
 <p>
 
-🏆 <b>1st Place – Bruteforce Hackathon</b><br><br>
-
-Developed EcoVestors marketplace platform focused on sustainable waste reuse and smart matching systems.
-
-<br><br>
-
-🥈 <b>2nd Place – PhaseShift Hackathon</b><br><br>
-
-Built AI crop prediction system using agricultural datasets and environmental parameters such as humidity, pH, rainfall and temperature.
+🏆 1st Place – Bruteforce Hackathon  
+Built EcoVestors sustainability marketplace.
 
 <br><br>
 
-💡 <b>Hackathon Participation</b><br><br>
-
-Actively participate in hackathons to build rapid prototypes, collaborate with teams and implement scalable solutions.
+🥈 2nd Place – PhaseShift Hackathon  
+Developed AI crop prediction model using agricultural datasets.
 
 </p>
+
+</div>
 
 </section>
 
@@ -338,19 +337,25 @@ Actively participate in hackathons to build rapid prototypes, collaborate with t
 
 <section id="resume" class="section">
 
+<div class="box">
+
 <h2 class="section-title">Resume</h2>
 
-<p>You can download my full resume below.</p>
+<p>Download my resume below.</p>
 
 <a class="btn" href="resume.pdf" download>
 Download Resume
 </a>
+
+</div>
 
 </section>
 
 <!-- CONTACT -->
 
 <section id="contact" class="section">
+
+<div class="box">
 
 <h2 class="section-title">Contact</h2>
 
@@ -370,6 +375,8 @@ linkedin.com/in/sanjana-vh
 </a>
 </p>
 
+</div>
+
 </section>
 
 <footer>
@@ -380,7 +387,7 @@ linkedin.com/in/sanjana-vh
 
 <script>
 
-/* SECTION SWITCHING */
+/* SECTION SWITCH */
 
 function showSection(sectionId){
 
@@ -394,7 +401,7 @@ document.getElementById(sectionId).classList.add("active");
 
 }
 
-/* TYPING ANIMATION */
+/* TYPING */
 
 const text=[
 "Software Developer",
@@ -409,9 +416,7 @@ let letter=""
 
 function typing(){
 
-if(i===text.length){
-i=0
-}
+if(i===text.length){i=0}
 
 current=text[i]
 letter=current.slice(0,++j)

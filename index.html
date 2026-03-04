@@ -27,7 +27,7 @@ color:#00f7ff;
 scroll-behavior:smooth;
 }
 
-/* PARTICLE BACKGROUND */
+/* PARTICLES */
 
 #particles-js{
 position:fixed;
@@ -43,10 +43,6 @@ display:flex;
 justify-content:space-between;
 padding:20px 10%;
 background:#020617;
-}
-
-nav h2{
-color:#00f7ff;
 }
 
 nav a{
@@ -75,36 +71,64 @@ font-size:22px;
 margin-top:10px;
 }
 
-/* BUTTON */
-
 .btn{
-margin-top:25px;
+margin-top:20px;
 padding:12px 25px;
 background:#00f7ff;
 color:black;
 border-radius:8px;
 text-decoration:none;
+display:inline-block;
+margin-right:10px;
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
 padding:80px 10%;
 text-align:center;
+border-bottom:1px solid #00f7ff;
 }
 
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+.section-title{
+font-size:32px;
+margin-bottom:30px;
 }
+
+/* PROJECT CARDS */
 
 .card{
 background:#020617;
 padding:20px;
 border-radius:12px;
 border:1px solid #00f7ff;
+margin-bottom:20px;
+text-align:left;
 }
+
+summary{
+font-size:20px;
+cursor:pointer;
+color:#00f7ff;
+}
+
+details p{
+margin-top:10px;
+line-height:1.6;
+}
+
+/* TECH BADGES */
+
+.badge{
+background:#00f7ff;
+color:black;
+padding:6px 10px;
+border-radius:6px;
+margin:4px;
+display:inline-block;
+}
+
+/* SKILLS */
 
 .skills span{
 border:1px solid #00f7ff;
@@ -112,6 +136,8 @@ padding:10px;
 margin:6px;
 display:inline-block;
 }
+
+/* FOOTER */
 
 footer{
 text-align:center;
@@ -134,6 +160,8 @@ padding:20px;
 <a href="#about">About</a>
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
+<a href="#achievements">Achievements</a>
+<a href="#github">GitHub</a>
 <a href="#contact">Contact</a>
 </div>
 
@@ -151,12 +179,12 @@ padding:20px;
 
 <section id="about">
 
-<h2>About Me</h2>
+<h2 class="section-title">About Me</h2>
 
 <p>
 
-Computer Science student specializing in IoT, Cybersecurity and Blockchain.  
-Passionate about building scalable software, AI systems and secure applications.
+Computer Science undergraduate specializing in IoT, Cybersecurity, and Blockchain technologies.  
+Passionate about building scalable software systems, AI-driven applications, and solving real-world challenges using data-driven solutions.
 
 </p>
 
@@ -164,41 +192,117 @@ Passionate about building scalable software, AI systems and secure applications.
 
 <section id="projects">
 
-<h2>Projects</h2>
-
-<div class="projects">
+<h2 class="section-title">Projects</h2>
 
 <div class="card">
 
-<h3>EcoVestors</h3>
+<details>
+<summary>EcoVestors – Waste Reuse Marketplace</summary>
 
-<p>Waste reuse marketplace built with Node.js, Express and MongoDB.</p>
+<p>
+
+Developed a sustainability-focused platform enabling exchange of reusable waste materials.
+
+Key Contributions:
+• Backend architecture design  
+• Authentication and user management  
+• Smart matching system for listings  
+• Admin analytics dashboard  
+
+</p>
+
+<div>
+
+<span class="badge">Node.js</span>
+<span class="badge">Express</span>
+<span class="badge">MongoDB</span>
+<span class="badge">JavaScript</span>
+
+</div>
+
+<br>
+
+<a class="btn" href="https://github.com/sanjanaa-10" target="_blank">GitHub Repo</a>
+
+</details>
 
 </div>
 
 <div class="card">
 
-<h3>Smart AgriTech</h3>
+<details>
+<summary>AI Crop Prediction System</summary>
 
-<p>IoT + AI crop monitoring system using Python and ESP32 sensors.</p>
+<p>
+
+Machine learning system that predicts whether crops can grow under environmental conditions.
+
+Key Contributions:
+• Dataset preprocessing and feature engineering  
+• Trained ML model using agricultural datasets  
+• Prediction using humidity, soil pH, rainfall, temperature and weather data  
+
+</p>
+
+<div>
+
+<span class="badge">Python</span>
+<span class="badge">Machine Learning</span>
+<span class="badge">Data Analysis</span>
+
+</div>
+
+<br>
+
+<a class="btn" href="https://github.com/sanjanaa-10" target="_blank">GitHub Repo</a>
+
+</details>
 
 </div>
 
 <div class="card">
 
-<h3>NetZeroCampus</h3>
+<details>
+<summary>NetZeroCampus – Carbon Awareness Platform</summary>
 
-<p>Carbon footprint tracking and analytics platform.</p>
+<p>
+
+Platform designed to track and visualize carbon emissions using interactive dashboards.
+
+</p>
+
+<div>
+
+<span class="badge">JavaScript</span>
+<span class="badge">REST APIs</span>
+<span class="badge">Data Visualization</span>
+
+</div>
+
+</details>
 
 </div>
 
 <div class="card">
 
-<h3>IoT Safety Device</h3>
+<details>
+<summary>IoT Safety Device</summary>
 
-<p>Emergency alert system using Arduino and ESP32.</p>
+<p>
+
+Emergency alert system designed using Arduino and ESP32 for real-time monitoring and notification.
+
+</p>
+
+<div>
+
+<span class="badge">Arduino</span>
+<span class="badge">ESP32</span>
+<span class="badge">IoT</span>
 
 </div>
+
+</details>
 
 </div>
 
@@ -206,28 +310,67 @@ Passionate about building scalable software, AI systems and secure applications.
 
 <section id="skills">
 
-<h2>Skills</h2>
+<h2 class="section-title">Technical Skills</h2>
 
 <div class="skills">
 
 <span>Python</span>
+<span>C</span>
 <span>C++</span>
+<span>Java</span>
 <span>JavaScript</span>
 <span>Node.js</span>
 <span>MongoDB</span>
+<span>MySQL</span>
+<span>Linux</span>
+<span>Git</span>
 <span>Cybersecurity</span>
-<span>IoT</span>
 
 </div>
 
 </section>
 
+<section id="achievements">
+
+<h2 class="section-title">Achievements</h2>
+
+<p>
+
+🏆 **1st Place – Bruteforce Hackathon**
+
+Developed EcoVestors marketplace platform focused on sustainable waste reuse and smart matching systems.
+
+<br><br>
+
+🥈 **2nd Place – PhaseShift Hackathon**
+
+Built AI crop prediction system using agricultural datasets and environmental parameters such as humidity, pH, rainfall, and temperature.
+
+<br><br>
+
+💡 **Hackathon Participation**
+
+Actively participate in technical hackathons to build rapid prototypes, collaborate with teams, and implement scalable solutions under time constraints.
+
+</p>
+
+</section>
+
+<section id="github">
+
+<h2 class="section-title">GitHub Activity</h2>
+
+<img src="https://github-readme-stats.vercel.app/api?username=sanjanaa-10&show_icons=true&theme=tokyonight">
+
+</section>
+
 <section id="contact">
 
-<h2>Contact</h2>
+<h2 class="section-title">Contact</h2>
 
 <p>Email: hathwarsanjana12@gmail.com</p>
 <p>GitHub: github.com/sanjanaa-10</p>
+<p>LinkedIn: linkedin.com/in/sanjana-vh</p>
 
 </section>
 
@@ -242,7 +385,7 @@ Passionate about building scalable software, AI systems and secure applications.
 const text=[
 "Software Developer",
 "Cybersecurity Enthusiast",
-"IoT & AI Builder"
+"AI & Data Enthusiast"
 ]
 
 let i=0

@@ -43,6 +43,9 @@ display:flex;
 justify-content:space-between;
 padding:20px 10%;
 background:#020617;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav a{
@@ -82,7 +85,13 @@ display:inline-block;
 margin-right:10px;
 }
 
-/* SECTION */
+.btn:hover{
+background:#00c4cc;
+transform:scale(1.05);
+transition:0.3s;
+}
+
+/* SECTIONS */
 
 section{
 padding:80px 10%;
@@ -104,6 +113,12 @@ border-radius:12px;
 border:1px solid #00f7ff;
 margin-bottom:20px;
 text-align:left;
+}
+
+.card:hover{
+box-shadow:0 0 15px #00f7ff;
+transform:translateY(-5px);
+transition:0.3s;
 }
 
 summary{
@@ -142,6 +157,10 @@ display:inline-block;
 footer{
 text-align:center;
 padding:20px;
+}
+
+a{
+color:#00f7ff;
 }
 
 </style>
@@ -204,6 +223,7 @@ Passionate about building scalable software systems, AI-driven applications, and
 Developed a sustainability-focused platform enabling exchange of reusable waste materials.
 
 Key Contributions:
+
 • Backend architecture design  
 • Authentication and user management  
 • Smart matching system for listings  
@@ -238,6 +258,7 @@ Key Contributions:
 Machine learning system that predicts whether crops can grow under environmental conditions.
 
 Key Contributions:
+
 • Dataset preprocessing and feature engineering  
 • Trained ML model using agricultural datasets  
 • Prediction using humidity, soil pH, rainfall, temperature and weather data  
@@ -283,29 +304,6 @@ Platform designed to track and visualize carbon emissions using interactive dash
 
 </div>
 
-<div class="card">
-
-<details>
-<summary>IoT Safety Device</summary>
-
-<p>
-
-Emergency alert system designed using Arduino and ESP32 for real-time monitoring and notification.
-
-</p>
-
-<div>
-
-<span class="badge">Arduino</span>
-<span class="badge">ESP32</span>
-<span class="badge">IoT</span>
-
-</div>
-
-</details>
-
-</div>
-
 </section>
 
 <section id="skills">
@@ -336,19 +334,19 @@ Emergency alert system designed using Arduino and ESP32 for real-time monitoring
 
 <p>
 
-🏆 **1st Place – Bruteforce Hackathon**
+🏆 <b>1st Place – Bruteforce Hackathon</b><br><br>
 
 Developed EcoVestors marketplace platform focused on sustainable waste reuse and smart matching systems.
 
 <br><br>
 
-🥈 **2nd Place – PhaseShift Hackathon**
+🥈 <b>2nd Place – PhaseShift Hackathon</b><br><br>
 
 Built AI crop prediction system using agricultural datasets and environmental parameters such as humidity, pH, rainfall, and temperature.
 
 <br><br>
 
-💡 **Hackathon Participation**
+💡 <b>Hackathon Participation</b><br><br>
 
 Actively participate in technical hackathons to build rapid prototypes, collaborate with teams, and implement scalable solutions under time constraints.
 
@@ -369,8 +367,20 @@ Actively participate in technical hackathons to build rapid prototypes, collabor
 <h2 class="section-title">Contact</h2>
 
 <p>Email: hathwarsanjana12@gmail.com</p>
-<p>GitHub: github.com/sanjanaa-10</p>
-<p>LinkedIn: linkedin.com/in/sanjana-vh</p>
+
+<p>
+GitHub:
+<a href="https://github.com/sanjanaa-10" target="_blank">
+github.com/sanjanaa-10
+</a>
+</p>
+
+<p>
+LinkedIn:
+<a href="https://linkedin.com/in/sanjana-vh" target="_blank">
+linkedin.com/in/sanjana-vh
+</a>
+</p>
 
 </section>
 
